@@ -17,7 +17,7 @@ export interface deleteBlogPostAction {
 }
 
 export const addBlogPost = (state: BlogPost[], post: BlogPost) => {
-  return [...state, { ...post, id: state.length + 1 }];
+  return [...state, { ...post, id: Math.floor(Math.random() * 999) }];
 };
 
 export const deleteBlogPost = (state: BlogPost[], id: number) => {
